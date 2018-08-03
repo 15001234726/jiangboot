@@ -69,10 +69,8 @@ public class MyHashMap<K, V> implements MyMap<K, V> {
                     return oldValue;
                 }
                 e = e.next;
-//                e.next = entry;
-//                e.next = e;
             }
-            table[index] = new Entry<K, V>(k, v, null);
+            table[index] = new Entry<K, V>(k, v, entry);
             ++entryUseSize;
 
         }
