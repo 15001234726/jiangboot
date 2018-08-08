@@ -1,4 +1,4 @@
-package com.jyh.jiangboot.com.command;
+package com.jyh.jiangboot.command;
 
 import java.io.*;
 import java.net.HttpURLConnection;

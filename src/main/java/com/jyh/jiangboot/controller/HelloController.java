@@ -1,4 +1,4 @@
-package com.jyh.jiangboot.com.controller;
+package com.jyh.jiangboot.controller;
 
 
 import org.springframework.stereotype.Controller;

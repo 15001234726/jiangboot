@@ -1,4 +1,4 @@
-package com.jyh.jiangboot.com.hashmap;
+package com.jyh.jiangboot.hashmap;
 
 import java.util.ArrayList;
 import java.util.List;

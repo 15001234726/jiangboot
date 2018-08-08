@@ -1,4 +1,4 @@
-package com.jyh.jiangboot.com.hashmap;
+package com.jyh.jiangboot.hashmap;
 
 public interface MyMap<K, V> {
 
