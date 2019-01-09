@@ -30,6 +30,9 @@ public class Easy07 {
     }
 
     public static void main(String[] args) {
+//        int x = 1234;
+//        x /= 10;
+//        System.out.println(x);
         System.out.println(Easy07.reverse(-1234));
 
     }
