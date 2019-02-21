@@ -24,7 +24,7 @@ public class DownloadFromUrl {
          * 读取文件地址
          */
 //        File saveDir = new File("");
-        File saveDir = new File("/Users/katyjiang/Desktop");
+        File saveDir = new File("/Users/luv/Desktop/专项附加扣除信息(2).xls");
         if(!saveDir.exists()){
             saveDir.mkdir();
         }
@@ -60,6 +60,14 @@ public class DownloadFromUrl {
         }
         bos.close();
         return bos.toByteArray();
+    }
+
+    public static void main(String[] args) {
+        try {
+            downloadFromUrl("https://shadowpriest.oss-cn-beijing.aliyuncs.com/work/%E4%B8%93%E9%A1%B9%E9%99%84%E5%8A%A0%E6%89%A3%E9%99%A4%E4%BF%A1%E6%81%AF%282%29.xls", "123.xls");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
 
