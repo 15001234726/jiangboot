@@ -27,18 +27,10 @@ public class CreateExcel {
         InputStream inputStream = conn.getInputStream();
 
         HSSFWorkbook hssfWorkbook = new HSSFWorkbook(inputStream);
-//
-//        InputStream is = new FileInputStream(path);
-//        HSSFWorkbook hssfWorkbook = new HSSFWorkbook(is);
-
-//        HSSFSheet sheet0 = hssfWorkbook.getSheetAt(2);
-//        HSSFRow hssfRow = sheet0.getRow(2);
-//        HSSFCell cell = hssfRow.getCell(5);
 
 
-
-        //导入
-//        System.out.println(to111(hssfWorkbook));
+//        导入
+        System.out.println(to111(hssfWorkbook));
 
 
     }
@@ -46,9 +38,10 @@ public class CreateExcel {
     public String to111(HSSFWorkbook hssfWorkbook) {
 
         //读数据
-        HSSFSheet sheet0 = hssfWorkbook.getSheetAt(6);
-        HSSFRow hssfRow = sheet0.getRow(9);
-        HSSFCell cell = hssfRow.getCell(4);
+        HSSFSheet sheet0 = hssfWorkbook.getSheetAt(4);
+        HSSFRow hssfRow = sheet0.getRow(4);
+        HSSFCell cell = hssfRow.getCell(7);
+
 
         return cell.toString();
 
@@ -60,7 +53,8 @@ public class CreateExcel {
     public static void main(String[] args) throws IOException {
         CreateExcel createExcel = new CreateExcel();
         createExcel.testExcel(
-                "https://shadowpriest.oss-cn-beijing.aliyuncs.com/work/%E4%B8%93%E9%A1%B9%E9%99%84%E5%8A%A0%E6%89%A3%E9%99%A4%E4%BF%A1%E6%81%AF.xls?Expires=1550718459&OSSAccessKeyId=TMP.AQGZEW_8yDuQeDp8wri8fdMzzXxRNDxEWbQsMMxmPLFaG4cEfZF6IUdSwEjjMC4CFQCwC5_U5P3Jf239J2tUvGh0WMOnSAIVAL-bsWMvLTxPKimQV1_mVQ4OvWZc&Signature=j6Q4%2BuAVOPmhmCjr5%2FRc0EinyHk%3D");
+                "https://shadowpriest.oss-cn-beijing.aliyuncs.com/work/%E4%B8%93%E9%A1%B9%E9%99%84%E5%8A%A0%E6%89%A3%E9%99%A4%E4%BF%A1%E6%81%AF%282%29.xls");
+
 
 
 
