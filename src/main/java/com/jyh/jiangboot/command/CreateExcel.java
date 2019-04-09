@@ -38,9 +38,9 @@ public class CreateExcel {
     public String to111(HSSFWorkbook hssfWorkbook) {
 
         //读数据
-        HSSFSheet sheet0 = hssfWorkbook.getSheetAt(4);
-        HSSFRow hssfRow = sheet0.getRow(4);
-        HSSFCell cell = hssfRow.getCell(7);
+        HSSFSheet sheet0 = hssfWorkbook.getSheetAt(2);
+        HSSFRow hssfRow = sheet0.getRow(2);
+        HSSFCell cell = hssfRow.getCell(6);
 
 
         return cell.toString();
@@ -53,7 +53,7 @@ public class CreateExcel {
     public static void main(String[] args) throws IOException {
         CreateExcel createExcel = new CreateExcel();
         createExcel.testExcel(
-                "https://shadowpriest.oss-cn-beijing.aliyuncs.com/work/%E4%B8%93%E9%A1%B9%E9%99%84%E5%8A%A0%E6%89%A3%E9%99%A4%E4%BF%A1%E6%81%AF%282%29.xls");
+                "https://shadowpriest.oss-cn-beijing.aliyuncs.com/work/%E4%B8%93%E9%A1%B9%E9%99%84%E5%8A%A0%E6%89%A3%E9%99%A4%E4%BF%A1%E6%81%AF.xls");
 
 
 
