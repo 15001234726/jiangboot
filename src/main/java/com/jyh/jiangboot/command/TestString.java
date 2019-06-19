@@ -1,7 +1,5 @@
 package com.jyh.jiangboot.command;
 
-import java.util.UUID;
-
 public class TestString {
 
 
@@ -43,7 +41,20 @@ public class TestString {
 //        fff += 1;
 //        System.out.println(fff);
 
-        System.out.println(UUID.randomUUID().toString().length());
+//        System.out.println(UUID.randomUUID().toString().length());
+//
+//        String team = "金融科技业务团队-互联网金融流量业务部-运营组";
+//
+//
+//        String[] teams = team.split("-");
+//
+//        String spell = "JYH";
+//        spell = spell + "-" + teams[teams.length - 1];
+//        System.out.println(spell);
+
+        String a = "jiangyuhong@megvii.com";
+        String b = a.split("@")[0];
+        System.out.println(b);
 
 
     }
