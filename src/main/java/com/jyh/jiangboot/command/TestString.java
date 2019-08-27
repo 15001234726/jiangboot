@@ -1,5 +1,9 @@
 package com.jyh.jiangboot.command;
 
+import javax.naming.directory.Attributes;
+import javax.naming.directory.BasicAttribute;
+import javax.naming.directory.BasicAttributes;
+
 public class TestString {
 
 
@@ -52,11 +56,73 @@ public class TestString {
 //        spell = spell + "-" + teams[teams.length - 1];
 //        System.out.println(spell);
 
-        String a = "jiangyuhong@megvii.com";
-        String b = a.split("@")[0];
-        System.out.println(b);
+//        String a = "jiangyuhong@megvii.com";
+//        String b = a.split("@")[0];
+//        System.out.println(b);
+
+        String a = "姜宇鸿";
+        System.out.println(gbEncoding(a));
+        System.out.println(decodeUnicode(gbEncoding(a)));
 
 
+        Attributes attributes=new BasicAttributes() ;
+        BasicAttribute objectclass=new BasicAttribute("objectclass");
+        objectclass.add("top");
+        objectclass.add("person");
+        objectclass.add("organizationalPerson");
+        objectclass.add("user");
+
+        attributes.put(objectclass);
+        attributes.put("cn",1);
+        attributes.put("sAMAccountname",2);
+
+        System.out.println(attributes);
+
+    }
+
+
+
+    /**
+     * 中文转UNICODE
+     * @param gbString
+     * @return
+     */
+    public static String gbEncoding(final String gbString) {
+        char[] utfBytes = gbString.toCharArray();
+        String unicodeBytes = "";
+        for (int i = 0; i < utfBytes.length; i++) {
+            String hexB = Integer.toHexString(utfBytes[i]);
+            if (hexB.length() <= 2) {
+                hexB = "00" + hexB;
+            }
+            unicodeBytes = unicodeBytes + "\\u" + hexB;
+        }
+        return unicodeBytes;
+    }
+
+
+    /**
+     * UNICODE转中文
+     * @param dataStr
+     * @return
+     */
+    public static String decodeUnicode(final String dataStr) {
+        int start = 0;
+        int end = 0;
+        final StringBuffer buffer = new StringBuffer();
+        while (start > -1) {
+            end = dataStr.indexOf("\\u", start + 2);
+            String charStr = "";
+            if (end == -1) {
+                charStr = dataStr.substring(start + 2, dataStr.length());
+            } else {
+                charStr = dataStr.substring(start + 2, end);
+            }
+            char letter = (char) Integer.parseInt(charStr, 16); // 16进制parse整形字符串。
+            buffer.append(new Character(letter).toString());
+            start = end;
+        }
+        return buffer.toString();
     }
 
 
