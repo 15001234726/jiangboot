@@ -1,9 +1,5 @@
 package com.jyh.jiangboot.command;
 
-import javax.naming.directory.Attributes;
-import javax.naming.directory.BasicAttribute;
-import javax.naming.directory.BasicAttributes;
-
 public class TestString {
 
 
@@ -47,36 +43,43 @@ public class TestString {
 
 //        System.out.println(UUID.randomUUID().toString().length());
 //
-//        String team = "金融科技业务团队-互联网金融流量业务部-运营组";
-//
-//
+        String team = "金融科技业务团队-互联网金融流量业务部-运营组";
+        String[] teamNames = team.split("-");
+
+        String parentName = team.replaceAll("-" + teamNames[teamNames.length - 1], "");
+
+        System.out.println(1);
+
 //        String[] teams = team.split("-");
 //
 //        String spell = "JYH";
 //        spell = spell + "-" + teams[teams.length - 1];
 //        System.out.println(spell);
-
+//
 //        String a = "jiangyuhong@megvii.com";
 //        String b = a.split("@")[0];
 //        System.out.println(b);
 
-        String a = "姜宇鸿";
-        System.out.println(gbEncoding(a));
-        System.out.println(decodeUnicode(gbEncoding(a)));
 
 
-        Attributes attributes=new BasicAttributes() ;
-        BasicAttribute objectclass=new BasicAttribute("objectclass");
-        objectclass.add("top");
-        objectclass.add("person");
-        objectclass.add("organizationalPerson");
-        objectclass.add("user");
 
-        attributes.put(objectclass);
-        attributes.put("cn",1);
-        attributes.put("sAMAccountname",2);
-
-        System.out.println(attributes);
+//        String a = "姜宇鸿";
+//        System.out.println(gbEncoding(a));
+//        System.out.println(decodeUnicode(gbEncoding(a)));
+//
+//
+//        Attributes attributes=new BasicAttributes() ;
+//        BasicAttribute objectclass=new BasicAttribute("objectclass");
+//        objectclass.add("top");
+//        objectclass.add("person");
+//        objectclass.add("organizationalPerson");
+//        objectclass.add("user");
+//
+//        attributes.put(objectclass);
+//        attributes.put("cn",1);
+//        attributes.put("sAMAccountname",2);
+//
+//        System.out.println(attributes);
 
     }
 
