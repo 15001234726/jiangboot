@@ -4,7 +4,7 @@ public class Demo1 {
 
 
     /**
-     *  无序数列0 到 n  n个数 每个数只出现一次 找到少的那个数
+     *  无序数列0到n  n个数 每个数只出现一次 找到缺少的那个数
      *
      * @param demo
      * @return
@@ -22,12 +22,10 @@ public class Demo1 {
 
 
     public static void main(String[] args) {
-        int[] demo = new int[] {0,1,2,3,4,5,6,7,8,9,10,11,12,13,14};
+        int[] demo = new int[] {8,9,10,11,12,13,14,0,1,2,3,4,5,6,7};
 
         int result = test(demo);
         System.out.println(result);
-
-
 
     }
 

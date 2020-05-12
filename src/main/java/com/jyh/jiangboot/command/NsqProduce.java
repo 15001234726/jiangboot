@@ -2,12 +2,13 @@ package com.jyh.jiangboot.command;
 
 import com.github.brainlag.nsq.NSQProducer;
 import com.github.brainlag.nsq.exceptions.NSQException;
+import java.util.concurrent.TimeoutException;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Component;
 
-import java.util.concurrent.TimeoutException;
-
 @Component
+@PropertySource("classpath:nsq.properties")
 public class NsqProduce {
 
     @Value("${NSQ_ADDRESS}")

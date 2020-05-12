@@ -1,17 +1,55 @@
 package com.jyh.jiangboot.command;
 
+import java.io.UnsupportedEncodingException;
+
 public class TestString {
 
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws UnsupportedEncodingException {
+        String temp = "姜宇鸿";
 
-//        String aaa = "淘鲜达啦啦啦啦略略略略";
-//        String bbb = "淘鲜达";
+        String temp2 = temp.trim().toLowerCase();
+
+        System.out.println(temp2);
+
+
+
+
+//        StringBuilder msg = new StringBuilder();
+
+//        for (int i = 0; i < 5; i ++) {
+//
+//            msg.append("111");
+//        }
+
+//        String a = "\u4dae";
+//        String b = "\ue863";
+//
+//
+//
+//
+//        System.out.println(new String(b.getBytes("utf-8")));
+//
+//        System.out.println(new String(a.getBytes("utf-8")));
+
+
+//        a.ch
+
+
+
+
+
+
+
+
+
+//        String aaa = "???????????";
+//        String bbb = "???";
 //
 //        if(aaa.indexOf(bbb)!=-1){
-//            System.out.println("包含");
+//            System.out.println("??");
 //        }else{
-//            System.out.println("不包含");
+//            System.out.println("???");
 //        }
 //
 //        int total = 1820;
@@ -43,12 +81,20 @@ public class TestString {
 
 //        System.out.println(UUID.randomUUID().toString().length());
 //
-        String team = "金融科技业务团队-互联网金融流量业务部-运营组";
-        String[] teamNames = team.split("-");
+//        String team = "????????-??????????-???";
+//        String[] teamNames = team.split("-");
+//
+//        System.out.println(teamNames.length);
+//
+//        System.out.println(teamNames[0]);
+//        System.out.println(teamNames[1]);
+//        System.out.println(teamNames[2]);
+//        System.out.println(teamNames[3]);
 
-        String parentName = team.replaceAll("-" + teamNames[teamNames.length - 1], "");
 
-        System.out.println(1);
+//        String parentName = team.replaceAll("-" + teamNames[teamNames.length - 1], "");
+//
+//        System.out.println(1);
 
 //        String[] teams = team.split("-");
 //
@@ -63,7 +109,7 @@ public class TestString {
 
 
 
-//        String a = "姜宇鸿";
+//        String a = "???";
 //        System.out.println(gbEncoding(a));
 //        System.out.println(decodeUnicode(gbEncoding(a)));
 //
@@ -86,7 +132,7 @@ public class TestString {
 
 
     /**
-     * 中文转UNICODE
+     * ???UNICODE
      * @param gbString
      * @return
      */
@@ -105,7 +151,7 @@ public class TestString {
 
 
     /**
-     * UNICODE转中文
+     * UNICODE???
      * @param dataStr
      * @return
      */
@@ -121,7 +167,7 @@ public class TestString {
             } else {
                 charStr = dataStr.substring(start + 2, end);
             }
-            char letter = (char) Integer.parseInt(charStr, 16); // 16进制parse整形字符串。
+            char letter = (char) Integer.parseInt(charStr, 16); // 16??parse??????
             buffer.append(new Character(letter).toString());
             start = end;
         }

@@ -27,8 +27,14 @@ public class TestList {
 //        list2.removeAll(list1);
 //        System.out.println(list2);
 
-        list1.removeAll(list2);
-        System.out.println(list1);
+//        list1.removeAll(list2);
+//        System.out.println(list1);
+
+        if (list1.contains(1)) {
+            System.out.println(2);
+        }
+
+
 
 
     }
