@@ -111,8 +111,44 @@
             <version>1.2.51</version>
         </dependency>
 
+		<!-- https://mvnrepository.com/artifact/org.apache.lucene/lucene-core -->
+		<!-- Lucene核心库 -->
+		<dependency>
+			<groupId>org.apache.lucene</groupId>
+			<artifactId>lucene-core</artifactId>
+			<version>7.2.1</version>
+		</dependency>
+		<!-- Lucene解析库 -->
+		<dependency>
+			<groupId>org.apache.lucene</groupId>
+			<artifactId>lucene-queryparser</artifactId>
+			<version>7.2.1</version>
+		</dependency>
+		<!-- Lucene附加的分析库 -->
+		<dependency>
+			<groupId>org.apache.lucene</groupId>
+			<artifactId>lucene-analyzers-common</artifactId>
+			<version>7.2.1</version>
+		</dependency>
 
-    </dependencies>
+		<dependency>
+			<groupId>com.github.magese</groupId>
+			<artifactId>ik-analyzer</artifactId>
+			<version>8.1.1</version>
+		</dependency>
+<!--		<dependency>-->
+<!--			<groupId>org.wltea.ik-analyzer</groupId>-->
+<!--			<artifactId>ik-analyzer</artifactId>-->
+<!--			<version>5.5.0</version>-->
+<!--		</dependency>-->
+
+		<dependency>
+    <groupId>io.github.biezhi</groupId>
+    <artifactId>wechat-api</artifactId>
+    <version>1.0.6</version>
+</dependency>
+
+	</dependencies>
 
 	<build>
 		<plugins>
@@ -120,14 +156,14 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <configuration>
-                    <source>8</source>
-                    <target>8</target>
-                </configuration>
-            </plugin>
+<!--            <plugin>-->
+<!--                <groupId>org.apache.maven.plugins</groupId>-->
+<!--                <artifactId>maven-compiler-plugin</artifactId>-->
+<!--                <configuration>-->
+<!--                    <source>8</source>-->
+<!--                    <target>8</target>-->
+<!--                </configuration>-->
+<!--            </plugin>-->
         </plugins>
 	</build>
 
